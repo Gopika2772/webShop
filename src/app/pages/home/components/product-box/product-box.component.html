@@ -1,5 +1,26 @@
-<!-- <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-1 gap-2 ">
-    <mat-card class="text-center">
+<div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-1 gap-2  ">
+    <mat-card class="mt-3px"[ngClass]="{'text-center': !fullWidthMode}">
+        <div [ngClass]="{flex:fullWidthMode}">
+            <img class=" mx-auto h-[200px]"
+            [ngClass]="{'h-200px': !fullWidthMode,'h-[360px]':fullWidthMode}"
+            src="https://via.placeholder.com/150"/>
+            <div class="w-full p-2"
+            [ngClass]="{' flex flex-col justify-between': fullWidthMode}">
+                <div>
+                    <h5>shoes</h5>
+                    <p class="truncate hover:whitespace-normal">snickers</p>
+                    <p *ngIf="fullWidthMode">Description</p>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-red-400">{{'150' | currency}}</span>
+                    <button>
+                        <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    <!-- <mat-card class="text-center">
         <div>
             <img class="mb-1 mx-auto h-[200px]"
             src="https://via.placeholder.com/150"/>
@@ -8,6 +29,12 @@
                     <h5>shoes</h5>
                     <p class="truncate hover:whitespace-normal">snickers</p>
                     <p>Description</p>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-red-400">{{'150' | currency}}</span>
+                    <button>
+                        <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+                    </button>
                 </div>
             </div>
         </div>
@@ -22,34 +49,17 @@
                     <p class="truncate hover:whitespace-normal">snickers</p>
                     <p>Description</p>
                 </div>
-            </div>
-        </div>
-    </mat-card>
-    <mat-card class="text-center">
-        <div>
-            <img class="mb-1 mx-auto h-[200px]"
-            src="https://via.placeholder.com/150"/>
-            <div class="w-full">
-                <div>
-                    <h5>shoes</h5>
-                    <p class="truncate hover:whitespace-normal">snickers</p>
-                    <p>Description</p>
+                <div class="flex justify-between">
+                    <span class="text-red-400">{{'150' | currency}}</span>
+                    <button>
+                        <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+                    </button>
                 </div>
             </div>
         </div>
-    </mat-card>
+    </mat-card> -->
     
-</div> -->
-<mat-card class="text-center">
-    <div>
-        <img class="mb-1 mx-auto h-[200px]"
-        src="https://via.placeholder.com/150"/>
-        <div class="w-full">
-            <div>
-                <h5>shoes</h5>
-                <p class="truncate hover:whitespace-normal">snickers</p>
-                <p>Description</p>
-            </div>
-        </div>
-    </div>
-</mat-card>
+<div>
+
+
+
