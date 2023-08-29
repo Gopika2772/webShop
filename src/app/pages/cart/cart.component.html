@@ -126,7 +126,15 @@
 
   <ng-container matColumnDef="quantity">
     <th mat-header-cell *matHeaderCellDef>Quantity</th>
-    <td mat-cell *matCellDef="let element">{{element.quantity}}
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button>
+        <mat-icon>remove</mat-icon>
+      </button>
+      <span>{{element.quantity}}</span>
+      <button mat-icon-button>
+        <mat-icon>add</mat-icon>
+      </button>
+    
     </td>
     <td mat-footer-cell *matFooterCellDef>
     </td>
@@ -136,6 +144,16 @@
     <td mat-cell *matCellDef="let transaction"> {{transaction.price * transaction.quantity |  currency:'INR'}} </td>
     <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency:'INR'}} </td>
   </ng-container>
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef>
+      <button mat-raised-button color="warn">Clear All</button>
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-mini-fab color="warn">close</button>
+    </td>
+  </ng-container>
+  
+  
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
