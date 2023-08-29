@@ -22,6 +22,7 @@ import { FiltersComponent } from './pages/home/components/filters/filters.compon
 import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { MatButtonModule } from '@angular/material/button';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatBadgeModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
+    CommonModule,
     MatButtonModule
 
   ],
